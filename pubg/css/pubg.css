@@ -8,10 +8,26 @@ html, body {
     height: 100%;
 }
 
-li {
+li, ol, dl, li {
     list-style: none;
 }
 
+li {
+    vert-align: top;
+}
+
+input, select, textarea, button {
+    vertical-align: top;
+}
+
+button, input[type=button] {
+    overflow: visible;
+    background: transparent;
+    cursor: pointer;
+}
+button span {
+    position: relative;
+}
 a {
     text-decoration: none;
     float: left;
@@ -29,11 +45,27 @@ div {
 
 body, input, select, textarea, button, th, td {
     font-size: 12px;
-    font-family: font-family: 'Arial', SimSun, sans-serif, 'Apple SD Gothic Neo';
+    font-family: 'Arial', SimSun, sans-serif, 'Apple SD Gothic Neo';
     color: #555;
 }
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
+a {
+    color:#555;
+    cursor: pointer;
+}
 /* header */
+.top_wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: url("../img/bg_header.gif")
+        repeat-x;
+}
 
 #header {
     top:0px;
@@ -51,8 +83,7 @@ body, input, select, textarea, button, th, td {
     content: '';
 }
 
-#header
-.communication_area
+#header .communication_area
 a:first-child {
     border-left-color: #060606;
 }
@@ -61,7 +92,7 @@ a:first-child {
     float: left;
     width: 102px;
     height: 51px;
-    padding: 19px 0 14px;
+    padding: 20px 0 14px;
     border-right: 1px solid #060606;
     border-left: 1px solid #232323;
     background: url(../img/bg_header2.gif)
@@ -71,17 +102,17 @@ a:first-child {
     box-sizing: border-box;
 }
 
-#header.etc_area {
+#header .etc_area {
     float: right;
 }
 
-#header.etc_area:after {
+#header .etc_area:after {
     display: block;
     clear: both;
     content: '';
 }
 
-#header.etc_area.socail_area {
+#header .etc_area .socail_area {
     float: left;
     padding: 15px 0 13px;
     font-size: 0;
